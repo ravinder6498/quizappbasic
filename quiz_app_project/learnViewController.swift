@@ -25,17 +25,17 @@ class learnViewController: UIViewController ,UITableViewDelegate,UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: "learncell") as! learncell
         cell.questionnumber.text = String(questionno)
-        cell.questionlabel.text = Questioncheck[indexPath.row]
+        cell.questionlabel.text = Questioncheck
         
-        cell.answerlabel.text = quizAnswerlist[indexPath.row]
+        cell.answerlabel.text = quizAnswerlist
         
         return cell
     }
     
 
      var quizModule: quiz!
-    var Questioncheck = ["nothing"]
-    var quizAnswerlist = ["answer ","",""]
+    var Questioncheck = "nothing"
+    var quizAnswerlist = "answer "
     var questionno:Int = 1
     
     @IBOutlet weak var answertable: UITableView!
